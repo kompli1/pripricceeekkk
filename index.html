@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="Коммерческое партнёрство с KazPricep для предпринимателей в Казахстане. Действующее ИП, Kaspi Pay и связь через WhatsApp.">
+  <meta property="og:title" content="Партнёрство с KazPricep">
+  <meta property="og:description" content="Узнайте условия коммерческого сотрудничества для предпринимателей с действующим ИП.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kpricep.org/">
+  <title>Партнёрство с KazPricep</title>
+  <link rel="icon" href="https://kpricep.com/favicon.ico">
+  <!-- TikTok Pixel: НЕ подключён. Добавить позже после получения Pixel ID. -->
+  <style>
+    :root{
+      --font: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      --page:#f5f6f7;
+      --surface:#ffffff;
+      --surface-2:#f8f9fa;
+      --header:#111827;
+      --header-text:#ffffff;
+      --text:#15191e;
+      --muted:#68717d;
+      --line:#e5e8ec;
+      --primary:#d92332;
+      --primary-text:#ffffff;
+      --primary-soft:#fff0f2;
+      --wa:#25D366;
+      --wa-dark:#169c46;
+      --success:#1b9a59;
+      --shadow:0 14px 40px rgba(16,24,40,.09);
+      --radius:18px;
+      --radius-sm:12px;
+      --container:1180px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;background:var(--page)}
+    body{margin:0;background:var(--page);color:var(--text);font-family:var(--font);line-height:1.5;-webkit-font-smoothing:antialiased}
+    a{color:inherit;text-decoration:none}
+    button,a{-webkit-tap-highlight-color:transparent}
+    .container{width:min(var(--container),calc(100% - 32px));margin-inline:auto}
+
+    .topbar{background:var(--header);color:var(--header-text);font-size:13px}
+    .topbar-inner{min-height:38px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+    .topbar-note{opacity:.82}
+    .topbar-links{display:flex;gap:18px;align-items:center}
+    .topbar-links a{opacity:.9}
+
+    .site-header{background:var(--surface);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:30}
+    .header-inner{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{display:flex;align-items:center;gap:12px;min-width:0}
+    .brand-logo-shell{width:54px;height:46px;display:grid;place-items:center;overflow:hidden;border-radius:10px;background:#fff}
+    .brand-logo-shell img{max-width:100%;max-height:100%;display:block;object-fit:contain}
+    .brand-text{display:flex;flex-direction:column;line-height:1.05}
+    .brand-name{font-size:23px;font-weight:900;letter-spacing:-.035em}
+    .brand-sub{font-size:11px;color:var(--muted);font-weight:700;margin-top:5px;text-transform:uppercase;letter-spacing:.07em}
+    .nav{display:flex;align-items:center;gap:26px;font-size:14px;font-weight:700}
+    .nav a{color:#374151}
+    .header-contact{display:flex;align-items:center;gap:12px}
+    .header-phone{font-size:14px;font-weight:850;white-space:nowrap}
+    .btn{min-height:50px;padding:0 18px;border:0;border-radius:10px;display:inline-flex;align-items:center;justify-content:center;gap:9px;font:inherit;font-weight:850;cursor:pointer;transition:transform .18s ease,filter .18s ease,box-shadow .18s ease}
+    .btn:hover{transform:translateY(-1px);filter:brightness(.99)}
+    .btn-primary{background:var(--primary);color:var(--primary-text);box-shadow:0 10px 24px color-mix(in srgb,var(--primary) 24%,transparent)}
+    .btn-wa{background:var(--wa);color:#082f19;box-shadow:0 12px 26px rgba(37,211,102,.20)}
+    .btn-outline{border:1px solid var(--line);background:#fff;color:var(--text)}
+    .wa-icon{width:21px;height:21px;display:block}
+
+    .crumbs{font-size:13px;color:#8a919a;padding:17px 0 0}
+    .crumbs a{color:#59616c}
+
+    .hero{padding:34px 0 42px}
+    .hero-card{background:var(--surface);border:1px solid var(--line);border-radius:22px;overflow:hidden;box-shadow:var(--shadow);display:grid;grid-template-columns:minmax(0,1.12fr) minmax(350px,.88fr)}
+    .hero-copy{padding:54px 52px 50px}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;color:var(--primary);font-size:13px;font-weight:850;text-transform:uppercase;letter-spacing:.065em;margin-bottom:17px}
+    .eyebrow-dot{width:8px;height:8px;background:var(--primary);border-radius:50%}
+    h1{font-size:clamp(40px,5.2vw,68px);line-height:1.02;letter-spacing:-.055em;margin:0 0 18px;max-width:720px}
+    h1 span{color:var(--primary)}
+    .hero-copy>p{font-size:19px;line-height:1.6;color:var(--muted);max-width:720px;margin:0 0 24px}
+    .hero-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:0 0 25px;padding:0;list-style:none}
+    .hero-list li{background:var(--surface-2);border:1px solid var(--line);border-radius:12px;padding:12px 13px;font-size:13px;font-weight:800;display:flex;gap:8px;align-items:center}
+    .tick{width:21px;height:21px;border-radius:50%;background:#eaf8f0;color:var(--success);display:grid;place-items:center;font-size:12px;flex:0 0 auto}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+    .hero-note{font-size:12px!important;color:#89919b!important;margin:13px 0 0!important}
+
+    .hero-side{background:linear-gradient(155deg,color-mix(in srgb,var(--primary) 92%,#111 8%),color-mix(in srgb,var(--primary) 58%,#111 42%));color:#fff;padding:42px;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden}
+    .hero-side:before,.hero-side:after{content:"";position:absolute;border-radius:50%;background:rgba(255,255,255,.08)}
+    .hero-side:before{width:250px;height:250px;right:-90px;top:-70px}.hero-side:after{width:190px;height:190px;left:-100px;bottom:-100px}
+    .partner-badge{position:relative;z-index:1;display:inline-flex;align-self:flex-start;padding:7px 10px;border:1px solid rgba(255,255,255,.25);border-radius:999px;font-size:12px;font-weight:850;background:rgba(255,255,255,.10);backdrop-filter:blur(6px)}
+    .hero-side h2{position:relative;z-index:1;font-size:34px;line-height:1.12;letter-spacing:-.035em;margin:21px 0 10px}
+    .hero-side p{position:relative;z-index:1;margin:0 0 22px;color:rgba(255,255,255,.85)}
+    .side-card{position:relative;z-index:1;background:#fff;color:var(--text);border-radius:16px;padding:18px;box-shadow:0 18px 50px rgba(0,0,0,.18)}
+    .side-card-title{font-size:13px;font-weight:900;margin-bottom:12px}
+    .side-row{display:flex;align-items:flex-start;gap:10px;padding:10px 0;border-top:1px solid #edf0f2;font-size:13px}
+    .side-row:first-of-type{border-top:0;padding-top:0}
+    .side-number{width:25px;height:25px;border-radius:8px;background:var(--primary-soft);color:var(--primary);display:grid;place-items:center;font-weight:900;flex:0 0 auto}
+
+    section.block{padding:34px 0}
+    .section-head{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:20px}
+    .section-head h2{font-size:34px;line-height:1.12;letter-spacing:-.04em;margin:0 0 6px}
+    .section-head p{margin:0;color:var(--muted);max-width:720px}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px;box-shadow:0 8px 24px rgba(16,24,40,.035)}
+    .card-icon{width:46px;height:46px;border-radius:12px;background:var(--primary-soft);color:var(--primary);display:grid;place-items:center;font-size:22px;font-weight:900;margin-bottom:18px}
+    .card h3{margin:0 0 8px;font-size:19px;letter-spacing:-.02em}
+    .card p{margin:0;color:var(--muted);font-size:14px}
+
+    .trust{display:grid;grid-template-columns:1.02fr .98fr;gap:14px}
+    .trust-main{background:var(--header);color:var(--header-text);border-radius:var(--radius);padding:30px}
+    .trust-main h2{font-size:31px;line-height:1.12;letter-spacing:-.035em;margin:0 0 10px}
+    .trust-main p{margin:0 0 22px;color:rgba(255,255,255,.72)}
+    .company-lines{display:grid;gap:9px;font-size:13px}
+    .company-line{display:flex;gap:9px;align-items:flex-start}
+    .company-line b{min-width:112px;color:#fff}
+    .company-line span{color:rgba(255,255,255,.72)}
+    .security{display:grid;gap:14px}
+    .security-box{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px}
+    .security-box h3{margin:0 0 8px;font-size:19px}.security-box p{margin:0;color:var(--muted);font-size:14px}
+    .security-box.good{border-left:4px solid var(--success)}
+    .security-box.warn{border-left:4px solid var(--primary)}
+
+    .cta-band{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:28px;display:flex;align-items:center;justify-content:space-between;gap:24px;box-shadow:var(--shadow)}
+    .cta-band h2{margin:0 0 5px;font-size:29px;letter-spacing:-.035em}.cta-band p{margin:0;color:var(--muted)}
+
+    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;counter-reset:steps}
+    .step{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px;position:relative}
+    .step:before{counter-increment:steps;content:"0" counter(steps);display:inline-flex;padding:6px 8px;border-radius:8px;background:var(--primary-soft);color:var(--primary);font-size:12px;font-weight:900;margin-bottom:26px}
+    .step h3{margin:0 0 7px;font-size:19px}.step p{margin:0;color:var(--muted);font-size:14px}
+
+    .faq{display:grid;gap:10px}
+    details{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:0 18px}
+    summary{list-style:none;cursor:pointer;padding:18px 34px 18px 0;font-weight:850;position:relative}
+    summary::-webkit-details-marker{display:none}
+    summary:after{content:"+";position:absolute;right:0;top:12px;font-size:25px;color:var(--primary)}
+    details[open] summary:after{content:"–"}
+    details p{margin:0;padding:0 0 18px;color:var(--muted);font-size:14px;max-width:930px}
+
+    .privacy-note{font-size:12px;color:#7b838d;max-width:780px;margin-top:14px}
+    .privacy-note a{text-decoration:underline;text-underline-offset:2px}
+    .legal{font-size:13px;color:var(--muted);background:var(--surface-2);border:1px solid var(--line);border-radius:14px;padding:17px 18px}
+    .legal b{color:var(--text)}
+
+    .footer{margin-top:38px;background:var(--header);color:var(--header-text);padding:42px 0 95px}
+    .footer-grid{display:grid;grid-template-columns:1.2fr .8fr .8fr;gap:36px}
+    .footer .brand-name{color:#fff}.footer .brand-sub{color:rgba(255,255,255,.55)}
+    .footer p{color:rgba(255,255,255,.62);font-size:13px;max-width:460px}
+    .footer h4{margin:0 0 12px;font-size:13px;text-transform:uppercase;letter-spacing:.05em}
+    .footer-links{display:grid;gap:9px;font-size:13px;color:rgba(255,255,255,.72)}
+    .copy{margin-top:32px;padding-top:20px;border-top:1px solid rgba(255,255,255,.12);font-size:12px;color:rgba(255,255,255,.52);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+
+    .sticky{display:none;position:fixed;left:10px;right:10px;bottom:10px;z-index:50;padding-bottom:env(safe-area-inset-bottom)}
+    .sticky .btn{width:100%;min-height:58px;border-radius:13px}
+
+    @media(max-width:980px){
+      .nav{display:none}.hero-card{grid-template-columns:1fr}.hero-side{min-height:440px}.cards,.steps{grid-template-columns:1fr}.trust{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr 1fr}.hero-list{grid-template-columns:1fr 1fr 1fr}
+    }
+    @media(max-width:700px){
+      html{scroll-padding-top:64px}
+      body{padding-bottom:calc(84px + env(safe-area-inset-bottom));overflow-x:hidden}
+      .container{width:calc(100% - 24px);max-width:100%}
+      .topbar,.nav,.header-phone,.crumbs{display:none!important}
+      .site-header{position:sticky;top:0;z-index:50;box-shadow:0 1px 0 rgba(15,23,42,.06);backdrop-filter:saturate(150%) blur(10px)}
+      .header-inner{min-height:60px;gap:10px}
+      .brand{gap:9px;min-width:0}
+      .brand-logo-shell{width:40px;height:34px;border-radius:8px;flex:0 0 auto}
+      .brand-name{font-size:18px;white-space:nowrap}
+      .brand-sub{display:none}
+      .header-contact{margin-left:auto}
+      .header-contact .btn{min-height:40px;padding:0 12px;border-radius:9px;font-size:12px;white-space:nowrap}
+
+      .hero{padding:10px 0 18px}
+      .hero-card{display:block;border-radius:16px;box-shadow:0 8px 24px rgba(16,24,40,.06)}
+      .hero-copy{padding:22px 18px 20px}
+      .eyebrow{font-size:11px;letter-spacing:.055em;margin-bottom:11px}
+      h1{font-size:clamp(31px,9.3vw,39px);line-height:1.03;letter-spacing:-.045em;margin-bottom:13px}
+      .hero-copy>p{font-size:15px;line-height:1.48;margin-bottom:15px}
+      .hero-list{grid-template-columns:1fr 1fr;gap:8px;margin-bottom:15px}
+      .hero-list li{padding:9px 10px;border-radius:10px;font-size:12px;line-height:1.25;min-height:44px}
+      .hero-list li:last-child{grid-column:1/-1}
+      .tick{width:19px;height:19px;font-size:11px}
+      .hero-actions{display:block}
+      .hero-actions .btn{width:100%;min-height:56px;border-radius:12px;font-size:15px;padding-inline:14px}
+      .hero-actions .btn-outline{display:none}
+      .hero-note{font-size:11px!important;line-height:1.35!important;margin-top:10px!important}
+      .hero-side{display:none}
+
+      section.block{padding:22px 0}
+      .section-head{display:block;margin-bottom:13px}
+      .section-head h2{font-size:25px;line-height:1.1;margin-bottom:5px}
+      .section-head p{font-size:13px;line-height:1.45}
+      .cards,.steps{gap:9px}
+      .card,.step{padding:16px;border-radius:14px;box-shadow:none}
+      .card-icon{width:38px;height:38px;border-radius:10px;margin-bottom:12px;font-size:17px}
+      .card h3,.step h3{font-size:17px;margin-bottom:5px}
+      .card p,.step p{font-size:13px;line-height:1.45}
+      .step:before{margin-bottom:14px}
+
+      .trust{gap:9px}
+      .trust-main{padding:19px;border-radius:14px}
+      .trust-main h2{font-size:24px}
+      .trust-main p{font-size:13px;margin-bottom:16px}
+      .company-lines{font-size:12px;gap:8px}
+      .company-line{display:block}
+      .company-line b{display:block;margin-bottom:1px;min-width:0}
+      .security{gap:9px}
+      .security-box{padding:16px;border-radius:14px}
+      .security-box h3{font-size:17px}
+      .security-box p{font-size:13px}
+
+      .cta-band{padding:18px;border-radius:15px;display:block;box-shadow:none}
+      .cta-band h2{font-size:23px;line-height:1.12}
+      .cta-band p{font-size:13px}
+      .cta-band .btn{width:100%;min-height:54px;margin-top:14px;border-radius:12px}
+
+      details{border-radius:12px;padding:0 14px}
+      summary{padding:16px 30px 16px 0;font-size:14px;line-height:1.35}
+      summary:after{top:10px}
+      details p{font-size:13px;line-height:1.5;padding-bottom:15px}
+      .legal{font-size:12px;line-height:1.5;padding:14px;border-radius:12px}
+
+      .footer{margin-top:18px;padding:28px 0 24px}
+      .footer-grid{grid-template-columns:1fr;gap:20px}
+      .footer-grid>div:nth-child(2),.footer-grid>div:nth-child(3){display:none}
+      .footer p{font-size:12px}
+      .copy{margin-top:18px;padding-top:15px;font-size:11px;line-height:1.45;display:block}
+      .copy span{display:block;margin-top:4px}
+
+      .sticky{display:block;left:12px;right:12px;bottom:calc(8px + env(safe-area-inset-bottom));padding:0;z-index:80}
+      .sticky:before{content:"";position:absolute;left:-12px;right:-12px;bottom:calc(-8px - env(safe-area-inset-bottom));height:calc(78px + env(safe-area-inset-bottom));background:linear-gradient(to top,rgba(245,246,247,.98) 68%,rgba(245,246,247,0));z-index:-1;pointer-events:none}
+      .sticky .btn{width:100%;min-height:58px;border-radius:14px;font-size:16px;box-shadow:0 12px 32px rgba(37,211,102,.3)}
+    }
+    @media(max-width:360px){
+      .container{width:calc(100% - 18px)}
+      .header-contact .btn{padding:0 9px;font-size:11px}
+      .brand-name{font-size:16px}
+      h1{font-size:30px}
+      .hero-copy{padding:20px 15px 18px}
+    }
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <div class="topbar-note">Продажа легковых прицепов и комплектующих по Казахстану</div>
+      <div class="topbar-links"><a href="https://kpricep.com/o-nas">О компании</a><a href="https://kpricep.com/kontakty">Контакты</a></div>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="https://kpricep.com/" aria-label="KazPricep">
+        <span class="brand-logo-shell" id="brandLogoShell"><img id="brandLogo" src="https://kpricep.com/favicon.ico" alt="KazPricep"></span>
+        <span class="brand-text"><span class="brand-name">KazPricep</span><span class="brand-sub">прицепы по Казахстану</span></span>
+      </a>
+      <nav class="nav" aria-label="Навигация">
+        <a href="https://kpricep.com/catalog">Каталог</a>
+        <a href="https://kpricep.com/o-nas">О компании</a>
+        <a href="#how">Как начать</a>
+        <a href="#faq">Вопросы</a>
+      </nav>
+      <div class="header-contact">
+        <a class="header-phone" href="tel:+77025076053">+7 (702) 507-60-53</a>
+        <a class="btn btn-primary" data-wa href="#">Сотрудничество</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container crumbs"><a href="https://kpricep.com/">Главная</a> / Партнёрство</div>
+
+    <section class="hero">
+      <div class="container">
+        <div class="hero-card">
+          <div class="hero-copy">
+            <div class="eyebrow"><span class="eyebrow-dot"></span>Партнёрство • Казахстан</div>
+            <h1>Партнёрство с <span>KazPricep</span> для предпринимателей</h1>
+            <p>Рассматриваем обращения от предпринимателей с действующим ИП и возможностью принимать безналичные платежи через Kaspi Pay. Условия и формат сотрудничества сообщаем до начала работы.</p>
+            <ul class="hero-list">
+              <li><span class="tick">✓</span>Действующее ИП</li>
+              <li><span class="tick">✓</span>Kaspi Pay для бизнеса</li>
+              <li><span class="tick">✓</span>Связь через WhatsApp</li>
+            </ul>
+            <div class="hero-actions">
+              <a class="btn btn-wa" data-wa href="#" aria-label="Написать в WhatsApp">
+                <svg class="wa-icon" viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M19.11 17.2c-.26-.13-1.55-.76-1.79-.85-.24-.09-.41-.13-.59.13-.17.26-.67.85-.82 1.02-.15.17-.3.2-.56.07-.26-.13-1.1-.4-2.1-1.29-.78-.69-1.3-1.54-1.45-1.8-.15-.26-.02-.4.11-.53.12-.12.26-.3.39-.46.13-.15.17-.26.26-.43.09-.17.04-.33-.02-.46-.07-.13-.59-1.41-.8-1.93-.21-.51-.43-.44-.59-.45h-.5c-.17 0-.46.07-.69.33-.24.26-.91.89-.91 2.17s.93 2.52 1.06 2.69c.13.17 1.84 2.81 4.45 3.94.62.27 1.11.43 1.49.55.63.2 1.2.17 1.65.1.5-.07 1.55-.63 1.77-1.24.22-.61.22-1.13.15-1.24-.06-.11-.24-.17-.5-.3z"/><path fill="currentColor" d="M16.02 3.2c-7.08 0-12.84 5.72-12.84 12.75 0 2.25.59 4.45 1.72 6.38L3.06 29l6.84-1.79a12.91 12.91 0 0 0 6.11 1.55h.01c7.08 0 12.84-5.72 12.84-12.75S23.1 3.2 16.02 3.2zm0 23.4h-.01a10.72 10.72 0 0 1-5.46-1.49l-.39-.23-4.06 1.06 1.08-3.94-.26-.4a10.53 10.53 0 0 1-1.63-5.65c0-5.87 4.81-10.64 10.73-10.64 5.92 0 10.73 4.77 10.73 10.64 0 5.87-4.81 10.65-10.73 10.65z"/></svg>
+                Узнать условия в WhatsApp
+              </a>
+              <a class="btn btn-outline" href="#how">Как проходит сотрудничество</a>
+            </div>
+            <p class="hero-note">Без обещаний фиксированного дохода. Условия зависят от согласованного формата сотрудничества.</p>
+          </div>
+
+          <aside class="hero-side">
+            <div class="partner-badge">KAZPRICEP • PARTNER</div>
+            <h2>Коротко, прозрачно и без передачи доступа к вашим аккаунтам</h2>
+            <p>Менеджер объяснит задачи, порядок взаимодействия и условия до начала сотрудничества.</p>
+            <div class="side-card">
+              <div class="side-card-title">Что нужно для первого контакта</div>
+              <div class="side-row"><span class="side-number">1</span><span>Ваш город и имя</span></div>
+              <div class="side-row"><span class="side-number">2</span><span>Подтверждение, что ИП действует</span></div>
+              <div class="side-row"><span class="side-number">3</span><span>Информация, используете ли Kaspi Pay для бизнеса</span></div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="requirements">
+      <div class="container">
+        <div class="section-head">
+          <div><h2>Кого рассматриваем</h2><p>На первом этапе нужны только базовые сведения. Документы и условия обсуждаются с представителем компании.</p></div>
+        </div>
+        <div class="cards">
+          <article class="card"><div class="card-icon">ИП</div><h3>Действующий предприниматель</h3><p>ИП зарегистрировано и ведёт законную предпринимательскую деятельность в Казахстане.</p></article>
+          <article class="card"><div class="card-icon">₸</div><h3>Kaspi Pay для бизнеса</h3><p>Используется в рамках предпринимательской деятельности. Мы не просим логины, пароли или коды подтверждения.</p></article>
+          <article class="card"><div class="card-icon">WA</div><h3>Готовность обсудить условия</h3><p>Первичный контакт проходит в WhatsApp. До начала сотрудничества вы получаете описание формата и требований.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="block">
+      <div class="container">
+        <div class="trust">
+          <div class="trust-main">
+            <h2>О компании KazPricep</h2>
+            <p>Основной сайт содержит каталог легковых прицепов, контакты и информацию о компании. Партнёрская страница является частью сайта KazPricep.</p>
+            <div class="company-lines">
+              <div class="company-line"><b>Компания</b><span>ТОО «КазПрицеп» / TOO KazPricep</span></div>
+              <div class="company-line"><b>Сфера</b><span>Продажа легковых прицепов, комплектующих и сопутствующих товаров</span></div>
+              <div class="company-line"><b>Контакт</b><span>+7 (702) 507-60-53 — вопросы сотрудничества</span></div>
+              <div class="company-line"><b>Сайт</b><span>kpricep.com</span></div>
+            </div>
+          </div>
+          <div class="security">
+            <div class="security-box good"><h3>Мы не запрашиваем доступ к Kaspi</h3><p>Не передавайте логин, пароль, SMS-коды, CVV, PIN-коды и доступ к приложению. Для первичного обращения это не требуется.</p></div>
+            <div class="security-box warn"><h3>Условия без обещаний «быстрого заработка»</h3><p>Размер и порядок вознаграждения, если они предусмотрены выбранным форматом, фиксируются только после обсуждения условий.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="block">
+      <div class="container">
+        <div class="cta-band">
+          <div><h2>Хотите узнать формат сотрудничества?</h2><p>Нажмите кнопку — откроется WhatsApp с подготовленным сообщением.</p></div>
+          <a class="btn btn-wa" data-wa href="#">Перейти в WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="how">
+      <div class="container">
+        <div class="section-head"><div><h2>Как начать</h2><p>Три понятных шага — без сложных анкет и скрытых условий.</p></div></div>
+        <div class="steps">
+          <article class="step"><h3>Напишите в WhatsApp</h3><p>Сообщение уже содержит тему обращения. Добавьте имя и ваш город.</p></article>
+          <article class="step"><h3>Расскажите о статусе ИП</h3><p>Укажите, что ИП действует и используется Kaspi Pay для предпринимательской деятельности.</p></article>
+          <article class="step"><h3>Получите условия</h3><p>Представитель KazPricep объяснит задачи, формат, документы и порядок взаимодействия.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="faq">
+      <div class="container">
+        <div class="section-head"><div><h2>Частые вопросы</h2><p>Основная информация до перехода в WhatsApp.</p></div></div>
+        <div class="faq">
+          <details><summary>Это вакансия по найму?</summary><p>Эта страница посвящена коммерческому партнёрству с предпринимателями. Она не содержит обещания трудоустройства. Конкретный юридический формат взаимодействия должен быть понятен обеим сторонам до начала сотрудничества.</p></details>
+          <details><summary>Зачем нужен Kaspi Pay?</summary><p>Он указывается только как инструмент, который предприниматель уже использует в своей деятельности. KazPricep не запрашивает доступ к вашему аккаунту, банковские пароли или коды подтверждения.</p></details>
+          <details><summary>Нужно ли что-то оплачивать, чтобы написать менеджеру?</summary><p>Нет. Первичное обращение в WhatsApp не требует оплаты. Если в дальнейшем предполагаются какие-либо договорные расчёты, их условия должны быть сообщены и согласованы заранее.</p></details>
+          <details><summary>Можно обратиться из любого города Казахстана?</summary><p>Да. Напишите ваш город в первом сообщении. Возможность конкретного формата сотрудничества уточняется индивидуально.</p></details>
+          <details><summary>Сколько можно получать?</summary><p>На лендинге нет обещаний гарантированного или фиксированного дохода. Финансовые условия зависят от фактического формата сотрудничества и сообщаются до его начала.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="privacy">
+      <div class="container">
+        <div class="legal"><b>Конфиденциальность.</b> Эта страница не собирает банковские пароли, SMS-коды, CVV, PIN-коды или доступ к аккаунтам. При нажатии на WhatsApp вы переходите в сервис WhatsApp и самостоятельно отправляете сообщение. Параметры рекламной ссылки (например, UTM и ttclid) могут быть добавлены в текст сообщения только для определения источника обращения.</div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a class="brand" href="https://kpricep.com/">
+            <span class="brand-logo-shell"><img id="footerBrandLogo" src="https://kpricep.com/favicon.ico" alt="KazPricep"></span>
+            <span class="brand-text"><span class="brand-name">KazPricep</span><span class="brand-sub">прицепы по Казахстану</span></span>
+          </a>
+          <p>Продажа легковых прицепов и комплектующих по Казахстану. Партнёрская страница для коммерческих обращений.</p>
+        </div>
+        <div><h4>Компания</h4><div class="footer-links"><a href="https://kpricep.com/">Главная</a><a href="https://kpricep.com/catalog">Каталог</a><a href="https://kpricep.com/o-nas">О компании</a><a href="https://kpricep.com/kontakty">Контакты</a></div></div>
+        <div><h4>Партнёрство</h4><div class="footer-links"><a href="#requirements">Требования</a><a href="#how">Как начать</a><a href="#faq">Вопросы</a><a href="#privacy">Конфиденциальность</a></div></div>
+      </div>
+      <div class="copy"><span>© <span id="year"></span> KazPricep.</span><span>Условия сотрудничества предоставляются индивидуально до начала взаимодействия.</span></div>
+    </div>
+  </footer>
+
+  <div class="sticky"><a class="btn btn-wa" data-wa href="#">Написать в WhatsApp</a></div>
+
+  <script>
+    (function(){
+      const phone='77025076053';
+      const params=new URLSearchParams(location.search);
+      const source=params.get('utm_source') || (params.get('ttclid') ? 'tiktok' : 'landing');
+      const campaign=params.get('utm_campaign');
+      const content=params.get('utm_content');
+      let msg='Здравствуйте! Интересует коммерческое партнёрство с KazPricep. У меня есть действующее ИП и Kaspi Pay для бизнеса. Прошу прислать условия сотрудничества.\n\nГород: ';
+      const tags=[];
+      if(source) tags.push('Источник: '+source);
+      if(campaign) tags.push('Кампания: '+campaign);
+      if(content) tags.push('Объявление: '+content);
+      if(tags.length) msg+='\n\n'+tags.join(' | ');
+      const wa='https://wa.me/'+phone+'?text='+encodeURIComponent(msg);
+      document.querySelectorAll('[data-wa]').forEach(a=>{
+        a.href=wa;a.target='_blank';a.rel='noopener noreferrer';
+        a.addEventListener('click',()=>{try{if(window.ttq&&typeof window.ttq.track==='function')window.ttq.track('ClickButton',{content_name:'kpricep_partner_whatsapp'});}catch(e){}});
+      });
+      document.getElementById('year').textContent=new Date().getFullYear();
+
+      // TikTok Pixel пока не подключён. Когда будет ID пикселя,
+      // его можно добавить здесь без изменения верстки. Обработчик ClickButton уже подготовлен выше.
+    })();
+  </script>
+</body>
+</html>
