@@ -1,0 +1,5 @@
+KPRICEP TikTok Pixel
+Domain: https://kpricep.org/
+Pixel ID: DAREDK3C77U5PB60A3CG
+Events: PageView + Contact
+Contact labels: job_whatsapp / partner_whatsapp / general_whatsapp
