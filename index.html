@@ -412,27 +412,15 @@
     };
 
     const phone='77025076053';
-    const qs=new URLSearchParams(location.search);
-    const source=qs.get('utm_source')||(qs.get('ttclid')?'tiktok':'landing');
-    const campaign=qs.get('utm_campaign');
-    const content=qs.get('utm_content');
-
     function getLang(){
       return window.__SITE_LANG==='kk'?'kk':'ru';
-    }
-    function tracking(lang){
-      const x=[];
-      if(source)x.push((lang==='kk'?'Дереккөз: ':'Источник: ')+source);
-      if(campaign)x.push((lang==='kk'?'Кампания: ':'Кампания: ')+campaign);
-      if(content)x.push((lang==='kk'?'Жарнама: ':'Объявление: ')+content);
-      return x.length?'\n\n'+x.join(' | '):'';
     }
     function updateWhatsApp(){
       const lang=getLang(), t=dict[lang];
       document.querySelectorAll('[data-wa]').forEach(a=>{
         const type=a.dataset.wa||'general';
         const msg=type==='job'?t.wa_job:(type==='partner'?t.wa_partner:t.wa_general);
-        a.href='https://wa.me/'+phone+'?text='+encodeURIComponent(msg+tracking(lang));
+        a.href='https://wa.me/'+phone+'?text='+encodeURIComponent(msg);
         a.target='_blank'; a.rel='noopener noreferrer';
       });
     }
